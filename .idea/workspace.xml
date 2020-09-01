@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2d7ee998-6341-4113-93b9-e0fa993e904e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1fMGwZMLT1z6QiKBmmg1i85wG4h" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.13.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="12.12.53" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/modules" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v13.2.0/bin/node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/utils" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/utils/helpers" />
+      <recent name="$PROJECT_DIR$/src/constants" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="register.js" type="NodeJSConfigurationType" path-to-node="$USER_HOME$/.nvm/versions/node/v12.13.0/bin/node" nameIsGenerated="true" path-to-js-file="src/register.js" working-dir="$PROJECT_DIR$">
+      <envs>
+        <env name="NODE_ENV" value="development" />
+        <env name="AUTHORIZATION_HEADER" value="Authorization" />
+        <env name="MIC_ACCOUNT_API_VERSION" value="1" />
+        <env name="MIC_ACCOUNT_HOST" value="0.0.0.0" />
+        <env name="MIC_ACCOUNT_PORT" value="3010" />
+        <env name="MIC_ACCOUNT_ROUTE_PREFIX" value="/account" />
+        <env name="MIC_ACCOUNT_POSTGRES_HOST" value="0.0.0.0" />
+        <env name="MIC_ACCOUNT_POSTGRES_PORT" value="5432" />
+        <env name="MIC_ACCOUNT_POSTGRES_EXTERNAL_PORT" value="5432" />
+        <env name="MIC_ACCOUNT_POSTGRES_USER" value="microservices-account-service-root" />
+        <env name="MIC_ACCOUNT_POSTGRES_DATABASE" value="microservices-account-service" />
+        <env name="MIC_ACCOUNT_POSTGRES_PASSWORD" value="paW0rd!123@" />
+        <env name="CRON_CHECK_INVALID_TOKENS_DELAY_SECS" value="3600" />
+        <env name="CRYPTO_SECRET" value="890DSAkl23)-223lp)!@" />
+        <env name="JWT_SECRET" value="!qwerty_ASD_petrol" />
+        <env name="JWT_ACCESS_EXPIRES_IN" value="1h" />
+        <env name="JWT_REFRESH_EXPIRES_IN" value="1w" />
+        <env name="JWT_PUBLIC_KEY_BASE64" value="" />
+        <env name="PEPPER" value="pepper_secret_test_sequelize_69" />
+        <env name="TEMP_DIR" value="/tmp/" />
+        <env name="UPLOAD_MAX_FILESIZE_MB" value="50" />
+        <env name="UPLOAD_MAX_FILES_COUNT" value="8" />
+        <env name="MIC_FILES_API_VERSION" value="1" />
+        <env name="MIC_FILES_HOST" value="0.0.0.0" />
+        <env name="MIC_FILES_PORT" value="3011" />
+        <env name="MIC_FILES_ROUTE_PREFIX" value="/files" />
+        <env name="MIC_FILES_MONGO_HOST" value="0.0.0.0" />
+        <env name="MIC_FILES_MONGO_PORT" value="27027" />
+        <env name="MIC_FILES_MONGO_USERNAME" value="microservices-files-service-root" />
+        <env name="MIC_FILES_MONGO_PASSWORD" value="Qwe123!" />
+        <env name="MIC_FILES_MONGO_DATABASE" value="microservices-files-service" />
+        <env name="RESIZE_RESOLUTION_LIST" value="[&quot;360&quot;,&quot;480&quot;]" />
+      </envs>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2d7ee998-6341-4113-93b9-e0fa993e904e" name="Default Changelist" comment="" />
+      <created>1596020787329</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596020787329</updated>
+      <workItem from="1596020788392" duration="204000" />
+      <workItem from="1596420816963" duration="1937000" />
+      <workItem from="1596433108300" duration="3095000" />
+      <workItem from="1596682475817" duration="19198000" />
+      <workItem from="1597035610618" duration="12236000" />
+      <workItem from="1597111081167" duration="10000" />
+      <workItem from="1597124100482" duration="8096000" />
+      <workItem from="1597141100896" duration="18000" />
+      <workItem from="1597141912729" duration="1837000" />
+      <workItem from="1597198478579" duration="10108000" />
+      <workItem from="1597216398239" duration="6051000" />
+      <workItem from="1597226627254" duration="3017000" />
+      <workItem from="1597371535082" duration="11817000" />
+      <workItem from="1597389381560" duration="12050000" />
+      <workItem from="1598930035713" duration="10056000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2338" y="188" width="1084" height="710" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597226757149">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="418" y="210" width="1084" height="710" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1597221335904" />
+    <state x="2338" y="188" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1597226757149" />
+    <state x="2616" y="392" width="518" height="294" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1597401299893">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2616" y="392" width="518" height="294" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1597401299893" />
+    <state width="1144" height="519" key="DebuggerActiveHint" timestamp="1597397253681">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1255" height="506" key="DebuggerActiveHint/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1597376955918" />
+    <state width="1144" height="519" key="DebuggerActiveHint/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1597397253681" />
+    <state x="2427" y="226" width="948" height="606" key="EnvironmentVariablesDialog" timestamp="1597226756720">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="507" y="324" width="941" height="572" key="EnvironmentVariablesDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1597221335309" />
+    <state x="2427" y="226" width="948" height="606" key="EnvironmentVariablesDialog/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1597226756720" />
+    <state x="2663" y="304" width="424" height="484" key="FileChooserDialogImpl" timestamp="1598946485763">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="743" y="323" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1597216238737" />
+    <state x="2663" y="304" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598946485763" />
+    <state width="1897" height="270" key="GridCell.Tab.0.bottom" timestamp="1598947583288">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="348" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1597383893674" />
+    <state width="1897" height="270" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598947583288" />
+    <state width="1897" height="270" key="GridCell.Tab.0.center" timestamp="1598947583288">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="348" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1597383893674" />
+    <state width="1897" height="270" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598947583288" />
+    <state width="1897" height="270" key="GridCell.Tab.0.left" timestamp="1598947583288">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="348" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1597383893674" />
+    <state width="1897" height="270" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598947583288" />
+    <state width="1897" height="270" key="GridCell.Tab.0.right" timestamp="1598947583288">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="348" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1597383893674" />
+    <state width="1897" height="270" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598947583288" />
+    <state width="1897" height="270" key="GridCell.Tab.1.bottom" timestamp="1598947583204">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="348" key="GridCell.Tab.1.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1597383893592" />
+    <state width="1897" height="270" key="GridCell.Tab.1.bottom/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598947583204" />
+    <state width="1897" height="270" key="GridCell.Tab.1.center" timestamp="1598947583204">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="348" key="GridCell.Tab.1.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1597383893592" />
+    <state width="1897" height="270" key="GridCell.Tab.1.center/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598947583204" />
+    <state width="1897" height="270" key="GridCell.Tab.1.left" timestamp="1598947583204">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="348" key="GridCell.Tab.1.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1597383893591" />
+    <state width="1897" height="270" key="GridCell.Tab.1.left/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598947583204" />
+    <state width="1897" height="270" key="GridCell.Tab.1.right" timestamp="1598947583204">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="348" key="GridCell.Tab.1.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1597383893592" />
+    <state width="1897" height="270" key="GridCell.Tab.1.right/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598947583204" />
+    <state width="1897" height="270" key="GridCell.Tab.2.bottom" timestamp="1598947583205">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="348" key="GridCell.Tab.2.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1597383893592" />
+    <state width="1897" height="270" key="GridCell.Tab.2.bottom/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598947583205" />
+    <state width="1897" height="270" key="GridCell.Tab.2.center" timestamp="1598947583204">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="348" key="GridCell.Tab.2.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1597383893592" />
+    <state width="1897" height="270" key="GridCell.Tab.2.center/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598947583204" />
+    <state width="1897" height="270" key="GridCell.Tab.2.left" timestamp="1598947583204">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="348" key="GridCell.Tab.2.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1597383893592" />
+    <state width="1897" height="270" key="GridCell.Tab.2.left/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598947583204" />
+    <state width="1897" height="270" key="GridCell.Tab.2.right" timestamp="1598947583204">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="348" key="GridCell.Tab.2.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1597383893592" />
+    <state width="1897" height="270" key="GridCell.Tab.2.right/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598947583204" />
+    <state width="1897" height="270" key="GridCell.Tab.3.bottom" timestamp="1598947583205">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="348" key="GridCell.Tab.3.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1597383893592" />
+    <state width="1897" height="270" key="GridCell.Tab.3.bottom/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598947583205" />
+    <state width="1897" height="270" key="GridCell.Tab.3.center" timestamp="1598947583205">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="348" key="GridCell.Tab.3.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1597383893592" />
+    <state width="1897" height="270" key="GridCell.Tab.3.center/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598947583205" />
+    <state width="1897" height="270" key="GridCell.Tab.3.left" timestamp="1598947583205">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="348" key="GridCell.Tab.3.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1597383893592" />
+    <state width="1897" height="270" key="GridCell.Tab.3.left/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598947583205" />
+    <state width="1897" height="270" key="GridCell.Tab.3.right" timestamp="1598947583205">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1897" height="348" key="GridCell.Tab.3.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1597383893592" />
+    <state width="1897" height="270" key="GridCell.Tab.3.right/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598947583205" />
+    <state x="449" y="187" key="SettingsEditor" timestamp="1596420993764">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="449" y="187" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1596420993764" />
+    <state x="2064" y="45" width="1677" height="986" key="find.popup" timestamp="1598946549935">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="144" y="71" width="1677" height="961" key="find.popup/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1597230962685" />
+    <state x="2064" y="45" width="1677" height="986" key="find.popup/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598946549935" />
+    <state x="2544" y="232" key="run.anything.popup" timestamp="1598939946113">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="624" y="253" key="run.anything.popup/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1597042192420" />
+    <state x="2544" y="232" key="run.anything.popup/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598939946113" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/utils/helpers/imageProcessing.js</url>
+          <line>85</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/utils/helpers/imageProcessing.js</url>
+          <line>36</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/utils/helpers/imageProcessing.js</url>
+          <line>53</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/utils/helpers/imageProcessing.js</url>
+          <line>57</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/utils/leopold/filterParser.js</url>
+          <line>49</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/utils/leopold/filterParser.js</url>
+          <line>53</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/utils/leopold/filterParser.js</url>
+          <line>42</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/utils/leopold/filterParser.js</url>
+          <line>16</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/utils/helpers/basicService.js</url>
+          <line>142</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/utils/leopold/filterParserSequelize.js</url>
+          <line>40</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/utils/leopold/filterParserSequelize.js</url>
+          <line>42</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/utils/leopold/filterParserSequelize.js</url>
+          <line>55</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/utils/leopold/filterParserSequelize.js</url>
+          <line>52</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/modules/v1/auth/auth.service.js</url>
+          <line>66</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/modules/v1/auth/auth.service.js</url>
+          <line>65</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/modules/v1/auth/auth.service.js</url>
+          <line>129</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/modules/v1/auth/auth.service.js</url>
+          <line>130</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/modules/v1/auth/auth.validator.js</url>
+          <line>23</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/modules/v1/auth/auth.validator.js</url>
+          <line>24</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/modules/v1/user/user.validator.js</url>
+          <line>18</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/modules/v1/user/user.validator.js</url>
+          <line>19</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

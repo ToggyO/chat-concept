@@ -1,0 +1,30 @@
+version: '3.3'
+services:
+  service-chat-concept-backend:
+    container_name: chat-concept-backend
+    build: .
+    ports:
+      - ${PORT}:${PORT}
+    volumes:
+      - ../chat-concept-volumes/chat-concept-logs:/usr/app/log
+    links:
+      - service-chat-concept-postgres-prod
+    depends_on:
+      - service-chat-concept-postgres-prod
+
+  service-chat-concept-postgres-prod:
+    container_name: sequelize-chat-concept-prod
+    image: postgres:12.1
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DATABASE}
+      COMPOSE_HTTP_TIMEOUT: 30
+    volumes:
+      - 'chat-concept-postgres-prod:/var/lib/postgresql/data'
+    ports:
+      - ${POSTGRES_EXTERNAL_PORT}:${POSTGRES_PORT}
+
+volumes:
+  chat-concept-postgres-prod:
