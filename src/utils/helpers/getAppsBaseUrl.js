@@ -6,14 +6,15 @@ import config from 'config';
 const {
   isProduction,
   NGINX_HOST,
-  NGINX_PORT,
+  // NGINX_PORT,
+  NGINX_EXTERNAL_PORT,
   HOST,
   PORT,
   // ROUTE_PREFIX,
 } = config;
 
 export const getAppBaseUrl = () => isProduction
-  ? `http://${NGINX_HOST}${NGINX_PORT ? `:${NGINX_PORT}` : ''}`
+  ? `http://${NGINX_HOST}${NGINX_EXTERNAL_PORT ? `:${NGINX_EXTERNAL_PORT}` : ''}`
   : `http://${HOST}:${PORT}`;
 
 // export const getFileServiceBaseUrl = () => isProduction

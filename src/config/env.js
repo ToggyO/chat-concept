@@ -25,6 +25,7 @@ const resultEnvVariables = {
   ...defaultEnvVariables,
   ...envVariables,
 };
+
 const variablesForPrint = Object.keys(resultEnvVariables).reduce((accumulator, envName) => {
   const MAX_LENGTH = 80;
   const vars = resultEnvVariables;

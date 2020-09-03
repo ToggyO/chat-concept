@@ -9,6 +9,7 @@ import { UserService } from '@modules/v1/user/user.service';
 import { AuthValidator } from './auth.validator';
 import { AuthModel } from './auth.model';
 import { UserController } from '../user/user.controller';
+import { UserModel } from '../user/user.model';
 
 export const AuthService = Object.create(basicService);
 

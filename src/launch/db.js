@@ -10,9 +10,13 @@ import { db } from '../db';
  * @returns {Promise<void>}
  */
 export const run = async ({ app }) => {
+  const {
+    isProduction,
+  } = config;
+
   db.init(config.POSTGRES_DATABASE, config.POSTGRES_USER, config.POSTGRES_PASSWORD, {
     host: config.POSTGRES_HOST,
-    port: config.POSTGRES_EXTERNAL_PORT,
+    port: isProduction ? config.POSTGRES_PORT : config.POSTGRES_EXTERNAL_PORT,
     dialect: 'postgres',
     logging: false,
     pool: {

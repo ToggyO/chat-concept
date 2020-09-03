@@ -36,6 +36,7 @@ const scheme = (sequelize, DataTypes) => ({
   name: {
     field: 'name',
     type: DataTypes.STRING,
+    unique: true,
     allowNull: false,
     _isEditable: true,
     _isCreatable: true,
@@ -43,7 +44,8 @@ const scheme = (sequelize, DataTypes) => ({
   age: {
     field: 'age',
     type: DataTypes.INTEGER,
-    allowNull: false,
+    allowNull: true,
+    defaultValue: 0,
     _isEditable: true,
     _isCreatable: true,
   },

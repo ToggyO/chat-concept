@@ -17,7 +17,7 @@ export const createRouter = () => {
 	 * Login
 	 * @swagger
 	 * path:
-	 *  /account/auth/token:
+	 *  /api/auth/token:
 	 *      post:
 	 *        tags:
 	 *          - Auth
@@ -61,7 +61,7 @@ export const createRouter = () => {
 	 * Refresh access token
 	 * @swagger
 	 * path:
-	 *  /account/auth/token:
+	 *  /api/auth/token:
 	 *      put:
 	 *        tags:
 	 *          - Auth

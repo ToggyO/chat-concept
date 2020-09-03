@@ -9,6 +9,7 @@ module.exports = {
     password: config.POSTGRES_PASSWORD,
     database: config.POSTGRES_DATABASE,
     host: config.POSTGRES_HOST,
+    // port: config.POSTGRES_PORT,
     port: config.POSTGRES_EXTERNAL_PORT,
     dialect: 'postgres',
   },
@@ -17,7 +18,8 @@ module.exports = {
     password: config.POSTGRES_PASSWORD,
     database: config.POSTGRES_DATABASE,
     host: config.POSTGRES_HOST,
-    port: config.POSTGRES_EXTERNAL_PORT,
+    port: config.POSTGRES_PORT,
+    // port: config.POSTGRES_EXTERNAL_PORT,
     dialect: 'postgres',
   },
 };

@@ -1,11 +1,15 @@
 /**
  * Описание: Файл содержит сервис для модуля Партнеры
  */
+import Sequelize from 'sequelize';
+
 import { getProp, basicService, customCrypto } from '@utils/helpers';
 import { ApplicationError } from '@utils/response';
 import { ERROR_CODES } from '@constants';
 import { UserModel } from './user.model';
 import { UserValidator } from './user.validator';
+
+const { Op } = Sequelize;
 
 export const UserService = Object.create(basicService);
 
@@ -23,10 +27,10 @@ UserService._getModels = () => UserModel._getModels();
  */
 UserService.getUsers = async function ({
   where = {},
-  attributes = [],
-  include = [],
+  attributes,
+  include,
   pagination = {},
-  order = [],
+  order,
 } = {}) {
   const users = await UserModel.findAndCountAll({
     where,
@@ -52,8 +56,8 @@ UserService.getUsers = async function ({
  */
 UserService.getUser = async function ({
   where = {},
-  attributes = [],
-  include = [],
+  attributes,
+  include,
 } = {}) {
   return UserModel.findOne({
     where,
@@ -72,13 +76,23 @@ UserService.createUser = async function ({ values = {} }) {
 
   await UserValidator.createUpdateUserValidator(driedValues);
 
-  const isExists = await UserService.getUser({ where: { email: driedValues.email } });
+  const isExists = await UserService.getUser({
+    // where: {
+    //   email: driedValues.email,
+    // },
+    where: {
+      [Op.or]: [
+        { email: driedValues.email },
+        { name: driedValues.name },
+      ],
+    },
+  });
 
   if (isExists) {
     throw new ApplicationError({
       statusCode: 409,
       errorCode: ERROR_CODES.conflict,
-      errorMessage: 'User with the same email already exists',
+      errorMessage: 'User with the same email or name already exists',
       errors: [],
     });
   }

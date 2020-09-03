@@ -1,17 +1,39 @@
-version: '3.3'
+version: '3.5'
 services:
   service-chat-concept-postgres:
     container_name: chat-concept-postgres
-    image: postgres:12.1
-    restart: unless-stopped
+    image: postgres:12.4
+    restart: always
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DATABASE}
     volumes:
-      - 'chat-concept:/var/lib/postgresql/data'
+      - 'chat-concept-postgres:/var/lib/postgresql/data'
     ports:
       - ${POSTGRES_EXTERNAL_PORT}:${POSTGRES_PORT}
 
+  service-chat-concept-redis:
+    container_name: chat-concept-redis
+    image: redis:alpine
+    restart: unless-stopped
+    command:
+      - 'redis-server'
+      - '--port ${REDIS_PORT}'
+      - '--requirepass ${REDIS_PASSWORD}'
+      - '--loglevel ${REDIS_LOGLEVEL:-warning}'
+      - '--databases 1'
+      - '--save 900 1'
+      - '--save 300 10'
+      - '--save 60 10000'
+      - '--maxmemory ${REDIS_MAXMEM:-50mb}'
+      - '--maxmemory-policy ${REDIS_POLICY:-noeviction}'
+    volumes:
+      - 'chat-concept-redis:/data/redis'
+    ports:
+      - ${REDIS_EXTERNAL_PORT}:${REDIS_PORT}
+
 volumes:
-  chat-concept:
+  chat-concept-postgres:
+  chat-concept-redis:
+

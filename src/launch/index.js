@@ -7,6 +7,7 @@ import * as db from './db';
 import * as modules from './modules';
 import * as deferredTasks from './deferredTasks';
 import * as errorHandler from './errorHandler';
+// import * as redis from './redis';
 
 /**
  * Инициализация приложения. Подключение к внешним зависимостям.
@@ -16,6 +17,7 @@ import * as errorHandler from './errorHandler';
 export default async ({ app }) => {
   common.run({ app });
   await db.run({ app });
+  // await redis.run({ app });
   modules.run({ app });
   initAxios({ app });
   await deferredTasks.run({ app });

@@ -1,19 +1,7 @@
-version: '3.3'
+version: '3.5'
 services:
-  service-chat-concept-backend:
-    container_name: chat-concept-backend
-    build: .
-    ports:
-      - ${PORT}:${PORT}
-    volumes:
-      - ../chat-concept-volumes/chat-concept-logs:/usr/app/log
-    links:
-      - service-chat-concept-postgres-prod
-    depends_on:
-      - service-chat-concept-postgres-prod
-
   service-chat-concept-postgres-prod:
-    container_name: sequelize-chat-concept-prod
+    container_name: chat-concept-postgress-prod
     image: postgres:12.1
     restart: always
     environment:
@@ -25,6 +13,43 @@ services:
       - 'chat-concept-postgres-prod:/var/lib/postgresql/data'
     ports:
       - ${POSTGRES_EXTERNAL_PORT}:${POSTGRES_PORT}
+    networks:
+      - app-network
+
+  service-chat-concept-backend:
+    container_name: chat-concept-backend
+    build: .
+    restart: always
+    ports:
+      - ${PORT}:${PORT}
+    volumes:
+      - ../chat-concept-volumes/chat-concept-logs:/usr/app/log
+    networks:
+      - app-network
+    depends_on:
+      - service-chat-concept-postgres-prod
+
+  service-chat-concept-nginx:
+    container_name: chat-concept-nginx
+    restart: always
+    image: nginx:1.19.1
+    ports:
+      - ${NGINX_EXTERNAL_PORT}:${NGINX_PORT}
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx_logs/:/var/log/nginx/
+    networks:
+      - app-network
+      - external-networkd
+    depends_on:
+      - service-chat-concept-backend
+
+networks:
+  app-network:
+    driver: bridge
+    internal: true
+  external-network:
+    driver: bridge
 
 volumes:
   chat-concept-postgres-prod:
