@@ -4,6 +4,7 @@
 import path from 'path';
 import express from 'express';
 import bodyParser from 'body-parser';
+import cors from 'cors';
 // import cookieParser from 'cookie-parser';
 
 import logger from '@utils/logger';
@@ -59,6 +60,8 @@ export const log = logger({
 export const run = ({ app }) => {
   // подключение логирования к приложению
   app.set('log', log);
+  // cors
+  app.use(cors());
   // Отключение заголовка x-powered-by
   // app.disable('x-powered-by');
   // Парсинг данных запроса
