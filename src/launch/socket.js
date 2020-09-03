@@ -12,5 +12,13 @@ export const run = async ({ server }) => {
 
       socket.emit('message', 'Hi!');
     });
+
+    socket.on('sendMessage', (message) => {
+      socket.emit('message', message);
+    });
+
+    socket.on('disconnect', () => {
+      console.log('disconnected');
+    });
   });
 };
