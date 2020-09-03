@@ -2,3 +2,5 @@
 172.19.0.1 - - [03/Sep/2020:05:41:25 +0000] "GET / HTTP/1.1" 404 555 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"
 172.19.0.1 - - [03/Sep/2020:05:41:36 +0000] "GET / HTTP/1.1" 404 555 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"
 172.29.0.1 - - [03/Sep/2020:07:21:43 +0000] "GET /favicon.ico HTTP/1.1" 404 555 "http://example.localhost:8080/api/users" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"
+172.19.0.1 - - [03/Sep/2020:10:02:42 +0000] "GET /favicon.ico HTTP/1.1" 404 555 "http://example.localhost:8080/api/users" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"
+192.168.2.45 - - [03/Sep/2020:11:26:20 +0000] "GET /favicon.ico HTTP/1.1" 404 555 "http://192.168.2.13:8080/api/users" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"
