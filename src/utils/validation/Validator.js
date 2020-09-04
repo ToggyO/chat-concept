@@ -98,6 +98,118 @@ export class Validator {
 	};
 
 	/**
+	 * Вилидация: значение является массивом
+	 * @param {any} itemsType - тип для элементов массива
+	 * @returns {this}
+	 */
+	isArray = ({ itemsType } = {}) => {
+	  if (this.error || this.#shouldReturnEmptyError) return this;
+	  if (!Array.isArray(this.value)) {
+	    this.#setNewError(VALIDATION_ERRORS.isArray({ field: this.field }));
+	  }
+	  if (itemsType && this.value.some(item => typeof item !== itemsType)) {
+	    this.#setNewError(VALIDATION_ERRORS.isAllItemsOfType({ field: this.field, itemType: itemsType }));
+	  }
+	  return this;
+	}
+
+	/**
+	 * Валидация: значение содержит только цифры
+	 * @returns {this}
+	 */
+	isContainsOnlyNumbers = () => {
+	  if (this.error || this.#shouldReturnEmptyError) return this;
+	  if (!/^\d+$/.test(this.value)) {
+	    this.#setNewError(VALIDATION_ERRORS.isContainsOnlyNumbers({ field: this.field }));
+	  }
+	  return this;
+	};
+
+	/**
+	 * Валидация: значение является булевым
+	 * @returns {this}
+	 */
+	isBoolean = () => {
+	  if (this.error || this.#shouldReturnEmptyError) return this;
+	  if (typeof this.value !== 'boolean') {
+	    this.#setNewError(VALIDATION_ERRORS.isBoolean({ field: this.field }));
+	  }
+	  return this;
+	};
+
+	/**
+	 * Валидация: минимальная длина
+	 * @param {number} minLength
+	 * @returns {this}
+	 */
+	minLength = ({ minLength }) => {
+	  if (this.error || this.#shouldReturnEmptyError) return this;
+	  if ((this.value || this.value === 0) && (`${this.value}`).length < minLength) {
+	    this.#setNewError({
+	      ...VALIDATION_ERRORS.minLength({ field: this.field, minLength }),
+	      additionalParams: { minLength },
+	    });
+	  }
+	  return this;
+	};
+
+	/**
+	 * Валидация: максимальная длина
+	 * @param {number} minLength
+	 * @returns {this}
+	 */
+	maxLength = ({ maxLength }) => {
+	  if (this.error || this.#shouldReturnEmptyError) return this;
+	  if ((this.value || this.value === 0) && (`${this.value}`).length > maxLength) {
+	    this.#setNewError({
+	      ...VALIDATION_ERRORS.maxLength({ field: this.field, maxLength }),
+	      additionalParams: { maxLength },
+	    });
+	  }
+	  return this;
+	};
+
+	/**
+	 * Валидация числа на вхождение в заданный интервал
+	 * @param {number} minValue - нижняя граница интервала
+	 * @param {number} maxValue - верхняя граница интервала
+	 * @returns {this}
+	 */
+	number = ({ minValue, maxValue }) => {
+	  if (this.error || this.#shouldReturnEmptyError) return this;
+	  if (this.value && typeof minValue === 'number' && this.value < minValue) {
+	    this.#setNewError({
+	      ...VALIDATION_ERRORS.minValue({ field: this.field, minValue }),
+	      additionalParams: { minValue },
+	    });
+	  } else if (this.value && typeof maxValue === 'number' && this.value > maxValue) {
+	    this.#setNewError({
+	      ...VALIDATION_ERRORS.maxValue({ field: this.field, maxValue }),
+	      additionalParams: { maxValue },
+	    });
+	  }
+	  return this;
+	};
+
+	/**
+	 * Валидация: длины с указанным списком значений
+	 * @param {object} props
+	 * @param {array} props.listOfLengths
+	 * @returns {this}
+	 */
+	predefinedListOfLength = ({ listOfLengths } = {}) => {
+	  if (this.error || this.#shouldReturnEmptyError) return this;
+	  if (!Array.isArray(listOfLengths) || listOfLengths.length === 0) return this;
+	  if ((this.value) && !listOfLengths.includes(this.value.length)) {
+	    this.#setNewError({
+	      ...VALIDATION_ERRORS.predefinedListOfLength({ field: this.field, listOfLengths }),
+	      additionalParams: { listOfLengths },
+	    });
+	  }
+	  return this;
+	};
+
+	/**
    * Валидация: корректный емейл
    * @returns {this}
    */
@@ -126,6 +238,121 @@ export class Validator {
 
 	  if (!isValid) {
 	    this.#setNewError(VALIDATION_ERRORS.isInvalidPasswordFormat({ field: this.field }));
+	  }
+	  return this;
+	};
+
+	/**
+	 * Валидация: корректный телефон
+	 * @returns {this}
+	 */
+	phone = () => {
+	  if (this.error || this.#shouldReturnEmptyError) return this;
+	  let isErrorDetected;
+	  if (this.value && (!(/^\d+$/.test(this.value || '')) || this.value[0] !== '7')) {
+	    isErrorDetected = true;
+	    this.#setNewError({
+	      ...VALIDATION_ERRORS.invalidPhoneFormat({ field: this.field, errorMessage: 'Invalid phone number' }),
+	    });
+	  }
+	  if (!isErrorDetected && this.value.length < 11) {
+	    this.#setNewError({
+	      ...VALIDATION_ERRORS.invalidPhoneFormat({
+	        field: this.field,
+	        errorMessage: 'Not enough characters in the phone number',
+	      }),
+	    });
+	  }
+	  if (!isErrorDetected && this.value.length > 11) {
+	    this.#setNewError({
+	      ...VALIDATION_ERRORS.invalidPhoneFormat({
+	        field: this.field,
+	        errorMessage: 'Too many characters in the phone number',
+	      }),
+	    });
+	  }
+	  return this;
+	};
+
+	/**
+	 * Валидация даты на формат и на вхождение в интервал
+	 * @param {string|date} minDate - нижняя граница интервала
+	 * @param {string|date} maxDate - верхняя граница интервала
+	 * @returns {this}
+	 */
+	dateFormat = (minDate, maxDate) => {
+	  if (this.error || this.#shouldReturnEmptyError) return this;
+
+	  const testDate = (new Date(this.value)).getTime();
+	  if (Number.isNaN(testDate)) {
+	    this.#setNewError({
+	      ...VALIDATION_ERRORS.invalidDateFormat({ field: this.field }),
+	    });
+	    return this;
+	  }
+
+	  const minDateTS = minDate ? (new Date(minDate)).getTime() : 0;
+	  const maxDateTS = maxDate ? (new Date(maxDate)).getTime() : 0;
+
+	  if (minDateTS && (minDateTS > testDate)) {
+	    this.#setNewError({
+	      ...VALIDATION_ERRORS.invalidDateFormat({ field: this.field, minDate }),
+	    });
+	  }
+
+	  if (maxDateTS && (maxDateTS < testDate)) {
+	    this.#setNewError({
+	      ...VALIDATION_ERRORS.invalidDateFormat({ field: this.field, maxDate }),
+	    });
+	  }
+
+	  return this;
+	};
+
+	/**
+	 * Валидация: минимального кол-ва записей в массиве
+	 * @param {number} minLength - минимальное количество
+	 * @returns {this}
+	 */
+	arrayMinLength = ({ minLength }) => {
+	  if (this.error || this.#shouldReturnEmptyError) return this;
+	  if (Array.isArray(this.value) && this.value.length < minLength) {
+	    this.#setNewError({
+	      ...VALIDATION_ERRORS.arrayMinLength({ field: this.field, minLength }),
+	      additionalParams: { minLength },
+	    });
+	  }
+	  return this;
+	};
+
+	/**
+	 * Валидация: максимального кол-ва записей в массиве
+	 * @param {number} maxLength - максимальное количество
+	 * @returns {this}
+	 */
+	arrayMaxLength = ({ maxLength }) => {
+	  if (this.error || this.#shouldReturnEmptyError) return this;
+	  if (Array.isArray(this.value) && this.value.length > maxLength) {
+	    this.#setNewError({
+	      ...VALIDATION_ERRORS.arrayMaxLength({ field: this.field, maxLength }),
+	      additionalParams: { maxLength },
+	    });
+	  }
+	  return this;
+	};
+
+	/**
+	 * Валидация: максимального кол-ва записей в массиве
+	 * @param {array} formats - список разрешенных форматов
+	 * @returns {this}
+	 */
+	allowedFormats = (formats) => {
+	  if (this.error || this.#shouldReturnEmptyError) { return this; }
+	  if (!Array.isArray(formats) || formats.length === 0) { return this; }
+	  if (!formats.includes(this.value.mimetype)) {
+	    this.#setNewError({
+	      ...VALIDATION_ERRORS.allowedFormats({ field: this.field, formats }),
+	    });
 	  }
 	  return this;
 	};
