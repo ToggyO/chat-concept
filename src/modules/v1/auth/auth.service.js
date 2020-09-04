@@ -62,7 +62,7 @@ AuthService.login = async (values = {}) => {
     accessExpire,
     refreshToken: newRefreshToken,
     refreshExpire,
-  } = generateToken({ userId: user.id, login: user.email });
+  } = generateToken({ userId: user.id, login: user.email, name: user.name });
 
   if (refreshToken.length >= 5) {
     await AuthModel.deleteRefreshTokens({
@@ -126,7 +126,7 @@ AuthService.refreshToken = async (incomingToken) => {
     accessExpire,
     refreshToken: newRefreshToken,
     refreshExpire,
-  } = generateToken({ userId: user.id, login: user.email });
+  } = generateToken({ userId: user.id, login: user.email, name: user.name });
 
   if (refreshToken.length >= 5) {
     await AuthModel.deleteRefreshTokens({

@@ -8,7 +8,7 @@ import { UserController } from '@modules/v1/user/user.controller';
 import { ApplicationError } from '@utils/response';
 import { ERROR_CODES } from '@constants';
 
-const unauthorizedErrorPayload = {
+export const unauthorizedErrorPayload = {
   statusCode: 401,
   errorMessage: 'Access token is expired or invalid',
   errorCode: ERROR_CODES.security__invalid_token_error,
@@ -20,12 +20,13 @@ const unauthorizedErrorPayload = {
  * @param {string} token - проверяемый токен
  * @returns {object} - результат проверки
  */
-export const checkToken = async (token) => {
+export const checkToken = async (token, socket) => {
   const { JWT_SECRET } = config;
   try {
     return jwt.verify(token, JWT_SECRET);
   } catch (error) {
     if (error.name === 'TokenExpiredError' || error.name === 'JsonWebTokenError') {
+      if (socket) socket.disconnect('ТОКЕ, БЛЯТЬ, ПРОТУХ!');
       throw new ApplicationError(unauthorizedErrorPayload);
     }
 

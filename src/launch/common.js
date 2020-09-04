@@ -2,6 +2,7 @@
  * Описание: Конфигурация основных настроек сервера
  */
 import path from 'path';
+import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 // import cookieParser from 'cookie-parser';
@@ -69,11 +70,13 @@ export const run = ({ app }) => {
   // app.use(cookieParser());
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({ extended: true }));
-  // FIXME: если не будет вьюх, то удалить
+
   // Указание двжка представлений
   const viewsPath = path.join(process.cwd(), 'src/views');
-  app.set('view engine', 'hbs');
   app.set('views', viewsPath);
+  app.set('view engine', 'hbs');
+  // Папка со статикой
+  app.use(express.static(path.join(process.cwd(), 'src/public')));
   // Обработка глобальных необработанных ошибок
   unhandledRejection({ app });
 };

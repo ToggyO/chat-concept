@@ -7,9 +7,10 @@ import { parseEnvExpireTime } from '@utils/format';
  * Генерация токена
  * @param {int} userId - идентификатор пользователя
  * @param {string} login - логин пользователя
+ * @param {string} name - имя пользователя
  * @return {string} - токен
  */
-export const generateToken = ({ userId, login }) => {
+export const generateToken = ({ userId, login, name }) => {
   const {
     JWT_SECRET,
     JWT_ACCESS_EXPIRES_IN,
@@ -20,6 +21,7 @@ export const generateToken = ({ userId, login }) => {
     accessToken: jwt.sign({
       userId,
       login,
+      name,
       type: 'access',
     }, JWT_SECRET, { expiresIn: JWT_ACCESS_EXPIRES_IN }),
     accessExpire: parseEnvExpireTime(JWT_ACCESS_EXPIRES_IN),
