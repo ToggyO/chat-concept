@@ -24,7 +24,7 @@ Preparation:
 3. `. db-migrate.sh` - to create database migrations.
 
 Start development server:
-1. `npm run dev` - to start development server.
+1. Open new terminal window and run `npm run dev` - to start development server.
 
 
 #### Production
